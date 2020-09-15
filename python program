@@ -1,0 +1,18 @@
+n=eval(input("enter the no of elements in the array")) 
+a=[0 for i in range(n)] 
+print("enter the elements of the array") 
+for i in range(n): 
+    a[i]=int(input()) 
+print("the entered unsorted array is:") 
+print(a)
+for i in range(0,n-1):
+    min=i
+    for j in range(i+1,n):
+        if(a[j]<a[min]):
+           min=j
+    if(min!=i):
+        temp=a[i]
+        a[i]=a[min]
+        a[min]=temp
+print("the sorted array is:")
+print(a)
